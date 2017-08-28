@@ -1,0 +1,44 @@
+---
+title: "Patterned multi-lined cat"
+author: "Natalie Lenberger"
+date: "8/28/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The Problem
+
+Suppose you want to print a multiline pattern to the console, such as:
+
+```
+*
+**
+```
+
+How can we get this?
+
+## First Solution
+
+You could use the `cat()` function like this:
+
+```{r}
+cat("*\n**")
+```
+
+## Second Solution
+
+You can also separate the call to `cat()` over lines:
+
+```{r}
+cat("
+*
+**")
+```
+
+
+But note that this produces an extra newline at the beginning!
+
+
